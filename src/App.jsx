@@ -9,9 +9,7 @@ function App() {
       <div className="result">result</div>
       <div className="backspace">backspace</div>
       <div className="clear">clear</div>
-      <div className="number">
-        <Number />
-      </div>
+      <Number className="number" />
       <div className="sign">sign</div>
     </div>
   );
