@@ -2,7 +2,7 @@ import "./Number.css";
 
 export default function Number() {
   return (
-    <div className="number">
+    <>
       <button className="nine">9</button>
       <button className="eight">8</button>
       <button className="seven">7</button>
@@ -15,6 +15,6 @@ export default function Number() {
       <button className="zero">0</button>
       <button className="double">00</button>
       <button className="point">.</button>
-    </div>
+    </>
   );
 }

@@ -1,14 +1,22 @@
 import "./Sign.css";
 
-export default function Sign() {
+export default function Sign(x, y) {
   return (
-    <div className="sign">
+    <>
       <button className="root">√</button>
-      <button className="multiply">*</button>
-      <button className="division">/</button>
-      <button className="plus">+</button>
-      <button className="minus">-</button>
+      <button className="multiply" onClick={(x, y) => x * y}>
+        *
+      </button>
+      <button className="division" onClick={(x, y) => x / y}>
+        /
+      </button>
+      <button className="plus" onClick={(x, y) => x + y}>
+        +
+      </button>
+      <button className="minus" onClick={(x, y) => x - y}>
+        -
+      </button>
       <button className="equal">=</button>
-    </div>
+    </>
   );
 }
