@@ -10,7 +10,8 @@
   grid-template-columns: 120px 120px 320px;
   grid-template-rows: 120px 120px 320px;
   justify-content: center;
-  border: solid;
+  gap: 8px;
+  row-gap: 4px;
 }
 
 .result {
@@ -18,7 +19,6 @@
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;
-  border: solid;
 }
 
 .backspace {
@@ -26,7 +26,6 @@
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 4;
-  border: solid;
 }
 
 .clear {
@@ -34,7 +33,6 @@
   grid-column-end: 2;
   grid-row-start: 4;
   grid-row-end: 6;
-  border: solid;
 }
 
 .number {
@@ -42,7 +40,6 @@
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 6;
-  border: solid;
 }
 
 .sign {
@@ -50,5 +47,4 @@
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 6;
-  border: solid;
 }

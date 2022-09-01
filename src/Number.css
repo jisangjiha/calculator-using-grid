@@ -1,6 +1,7 @@
 .number {
   display: grid;
-  justify-items: stretch;
+  justify-items: center;
+  justify-content: center;
 }
 
 .nine {
