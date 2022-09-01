@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import Number from "./Number.jsx";
+import Sign from "./Sign.jsx";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <div className="backspace">backspace</div>
       <div className="clear">clear</div>
       <Number className="number" />
-      <div className="sign">sign</div>
+      <Sign className="sign" />
     </div>
   );
 }
