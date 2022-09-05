@@ -1,44 +1,44 @@
-.nine {
+.number-9 {
   grid-column-start: 4;
   grid-row-start: 2;
 }
 
-.eight {
+.number-8 {
   grid-column-start: 3;
   grid-row-start: 2;
 }
 
-.seven {
+.number-7 {
   grid-column-start: 2;
   grid-row-start: 2;
 }
 
-.six {
+.number-6 {
   grid-column-start: 4;
   grid-row-start: 3;
 }
 
-.five {
+.number-5 {
   grid-column-start: 3;
   grid-row-start: 3;
 }
 
-.four {
+.number-4 {
   grid-column-start: 2;
   grid-row-start: 3;
 }
 
-.three {
+.number-3 {
   grid-column-start: 4;
   grid-row-start: 4;
 }
 
-.two {
+.number-2 {
   grid-column-start: 3;
   grid-row-start: 4;
 }
 
-.one {
+.number-1 {
   grid-column-start: 2;
   grid-row-start: 4;
 }
@@ -53,7 +53,7 @@
   grid-row-start: 5;
 }
 
-.zero {
+.number-0 {
   grid-column-start: 2;
   grid-row-start: 5;
 }

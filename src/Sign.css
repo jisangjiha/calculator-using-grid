@@ -14,12 +14,12 @@
   grid-row-start: 3;
 }
 
-.plus {
+.add {
   grid-column-start: 5;
   grid-row-start: 4;
 }
 
-.minus {
+.subtract {
   grid-column-start: 6;
   grid-row-start: 4;
 }

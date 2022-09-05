@@ -10,10 +10,10 @@ export default function Signs(x, y) {
       <button className="division" onClick={(x, y) => x / y}>
         /
       </button>
-      <button className="plus" onClick={(x, y) => x + y}>
+      <button className="add" onClick={(x, y) => x + y}>
         +
       </button>
-      <button className="minus" onClick={(x, y) => x - y}>
+      <button className="subtract" onClick={(x, y) => x - y}>
         -
       </button>
       <button className="equal">=</button>

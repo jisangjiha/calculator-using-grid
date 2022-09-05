@@ -7,20 +7,20 @@ function Number({ num, appendNumber }) {
     </button>
   );
 }
-//<Number num={9} appendNumber={appendNumber} />
+
 export default function Numbers({ appendNumber }) {
   return (
     <>
-      <button className="nine">9</button>
-      <button className="eight">8</button>
-      <button className="seven">7</button>
-      <button className="six">6</button>
-      <button className="five">5</button>
-      <button className="four">4</button>
-      <button className="three">3</button>
-      <button className="two">2</button>
-      <button className="one">1</button>
-      <button className="zero">0</button>
+      <Number num={9} appendNumber={appendNumber} />
+      <Number num={8} appendNumber={appendNumber} />
+      <Number num={7} appendNumber={appendNumber} />
+      <Number num={6} appendNumber={appendNumber} />
+      <Number num={5} appendNumber={appendNumber} />
+      <Number num={4} appendNumber={appendNumber} />
+      <Number num={3} appendNumber={appendNumber} />
+      <Number num={2} appendNumber={appendNumber} />
+      <Number num={1} appendNumber={appendNumber} />
+      <Number num={0} appendNumber={appendNumber} />
       <button className="double-zero">00</button>
       <button className="decimal-point">.</button>
     </>
