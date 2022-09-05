@@ -1,9 +1,9 @@
 import "./Sign.css";
 
-export default function Sign(x, y) {
+export default function Signs(x, y) {
   return (
     <>
-      <button className="root">√</button>
+      <button className="squre-root">√</button>
       <button className="multiply" onClick={(x, y) => x * y}>
         *
       </button>

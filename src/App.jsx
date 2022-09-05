@@ -4,19 +4,20 @@ import Number from "./Number.jsx";
 import Sign from "./Sign.jsx";
 
 function App() {
-  const [input, setInput] = useState({ x: "", y: "" });
-
-  function calculate(x, y) {
-    input.x = x;
-    input.y = y;
+  const [calc, setCalc] = useState({ display: 0, operand: null, stored: null });
+  function appendNumber(n) {
+    setCalc({
+      ...calc,
+      display: calc.display * 10 + n,
+    });
   }
 
   return (
     <div className="container">
-      <div className="result">result</div>
+      <div className="outcome">{calc.display}</div>
       <button className="backspace">▶</button>
       <button className="clear">C</button>
-      <Number className="number">{calculate()}</Number>
+      <Number className="number" appendNumber={appendNumber}></Number>
       <Sign className="sign"></Sign>
     </div>
   );

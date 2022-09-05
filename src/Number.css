@@ -61,14 +61,14 @@
   grid-row-end: 5;
 }
 
-.point {
+.decimal-point {
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 5;
   grid-row-end: 6;
 }
 
-.double {
+.double-zero {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 5;

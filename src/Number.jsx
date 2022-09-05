@@ -1,6 +1,14 @@
 import "./Number.css";
 
-export default function Number() {
+function Number({ num, appendNumber }) {
+  return (
+    <button className={`number-${num}`} onClick={() => appendNumber(num)}>
+      {num}
+    </button>
+  );
+}
+//<Number num={9} appendNumber={appendNumber} />
+export default function Numbers({ appendNumber }) {
   return (
     <>
       <button className="nine">9</button>
@@ -13,8 +21,8 @@ export default function Number() {
       <button className="two">2</button>
       <button className="one">1</button>
       <button className="zero">0</button>
-      <button className="double">00</button>
-      <button className="point">.</button>
+      <button className="double-zero">00</button>
+      <button className="decimal-point">.</button>
     </>
   );
 }

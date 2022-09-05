@@ -12,9 +12,15 @@
   justify-content: center;
   gap: 8px;
   row-gap: 8px;
+  background-color: lightgray;
 }
 
-.result {
+.container > button {
+  background-color: black;
+  color: white;
+}
+
+.outcome {
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row-start: 1;
