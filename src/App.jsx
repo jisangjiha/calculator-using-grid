@@ -1,10 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import Number from "./Number.jsx";
+import Numbers from "./Numbers.jsx";
 import Sign from "./Sign.jsx";
 
 function App() {
   const [calc, setCalc] = useState({ display: 0, operand: null, stored: null });
+
   function appendNumber(n) {
     setCalc({
       ...calc,
@@ -17,7 +18,7 @@ function App() {
       <div className="outcome">{calc.display}</div>
       <button className="backspace">▶</button>
       <button className="clear">C</button>
-      <Number className="number" appendNumber={appendNumber}></Number>
+      <Numbers className="number" appendNumber={appendNumber}></Numbers>
       <Sign className="sign"></Sign>
     </div>
   );

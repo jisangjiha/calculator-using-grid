@@ -1,4 +1,4 @@
-import "./Number.css";
+import "./Numbers.css";
 
 function Number({ num, appendNumber }) {
   return (
