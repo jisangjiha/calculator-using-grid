@@ -1,10 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 import Numbers from "./Numbers.jsx";
-import Sign from "./Sign.jsx";
+import Signs from "./Signs.jsx";
 
 function App() {
-  const [calc, setCalc] = useState({ display: 0, operand: null, stored: null });
+  const [calc, setCalc] = useState({
+    display: 0,
+    operator: null,
+    stored: null,
+  });
 
   function appendNumber(n) {
     setCalc({
@@ -13,13 +17,22 @@ function App() {
     });
   }
 
+  function deleteNumber() {
+    setCalc({
+      ...calc,
+      display: Math.floor(calc.display / 10),
+    });
+  }
+
   return (
     <div className="container">
       <div className="outcome">{calc.display}</div>
-      <button className="backspace">▶</button>
+      <button className="backspace" onClick={deleteNumber}>
+        ▶
+      </button>
       <button className="clear">C</button>
       <Numbers className="number" appendNumber={appendNumber}></Numbers>
-      <Sign className="sign"></Sign>
+      <Signs className="sign"></Signs>
     </div>
   );
 }
