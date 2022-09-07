@@ -24,13 +24,22 @@ function App() {
     });
   }
 
+  function clear() {
+    setCalc({
+      ...calc,
+      display: 0,
+    });
+  }
+
   return (
     <div className="container">
       <div className="outcome">{calc.display}</div>
       <button className="backspace" onClick={deleteNumber}>
         ▶
       </button>
-      <button className="clear">C</button>
+      <button className="clear" onClick={clear}>
+        C
+      </button>
       <Numbers className="number" appendNumber={appendNumber}></Numbers>
       <Signs className="sign"></Signs>
     </div>
