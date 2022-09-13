@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Numbers from "./Numbers.jsx";
 import Signs from "./Signs.jsx";
+import { operate } from "./utils";
 
 function App() {
   const [calc, setCalc] = useState({
@@ -9,13 +10,6 @@ function App() {
     operator: null,
     stored: null,
   });
-
-  function appendNumber(n) {
-    setCalc({
-      ...calc,
-      display: calc.display * 10 + n,
-    });
-  }
 
   function deleteNumber() {
     setCalc({
@@ -31,6 +25,36 @@ function App() {
     });
   }
 
+  function appendNumber(n) {
+    if (calc.operator) {
+      setCalc({
+        ...calc,
+        display: n,
+        stored: calc.display,
+      });
+    } else {
+      setCalc({
+        ...calc,
+        display: calc.display * 10 + n,
+      });
+    }
+  }
+
+  function setOperator(sign) {
+    if (calc.stored) {
+      setCalc({
+        display: operate(calc.stored, calc.display, calc.operator),
+        operator: sign,
+        stored: null,
+      });
+    } else {
+      setCalc({
+        ...calc,
+        operator: sign,
+      });
+    }
+  }
+
   return (
     <div className="container">
       <div className="outcome">{calc.display}</div>
@@ -40,8 +64,8 @@ function App() {
       <button className="clear" onClick={clear}>
         C
       </button>
-      <Numbers className="number" appendNumber={appendNumber}></Numbers>
-      <Signs className="sign"></Signs>
+      <Numbers appendNumber={appendNumber}></Numbers>
+      <Signs setOperator={setOperator}></Signs>
     </div>
   );
 }
