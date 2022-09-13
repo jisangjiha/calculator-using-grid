@@ -55,6 +55,14 @@ function App() {
     }
   }
 
+  function setEqual() {
+    setCalc({
+      display: operate(calc.stored, calc.display, calc.operator),
+      operator: null,
+      stored: null,
+    });
+  }
+
   return (
     <div className="container">
       <div className="outcome">{calc.display}</div>
@@ -65,7 +73,7 @@ function App() {
         C
       </button>
       <Numbers appendNumber={appendNumber}></Numbers>
-      <Signs setOperator={setOperator}></Signs>
+      <Signs setOperator={setOperator} setEqual={setEqual}></Signs>
     </div>
   );
 }

@@ -1,10 +1,12 @@
 import "./Signs.css";
 
+/*
 function Operator(sign, setOperator) {
-  return <button onClick={() => setOperator}>{sign}</button>;
+  return <button className={`${sign}`} onClick={() => setOperator(sign)} />;
 }
+*/
 
-export default function Signs({ setOperator }) {
+export default function Signs({ setOperator, setEqual }) {
   return (
     <>
       <button className="squre-root">√</button>
@@ -20,7 +22,9 @@ export default function Signs({ setOperator }) {
       <button className="subtract" onClick={() => setOperator("substract")}>
         -
       </button>
-      <button className="equal">=</button>
+      <button className="equal" onClick={() => setEqual()}>
+        =
+      </button>
     </>
   );
 }
