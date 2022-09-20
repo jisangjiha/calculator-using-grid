@@ -20,27 +20,28 @@ function App() {
 
   function clear() {
     setCalc({
-      ...calc,
       display: 0,
+      operator: null,
+      stored: null,
     });
   }
 
   function appendNumber(n) {
-    if (calc.operator) {
+    if (calc.operator && calc.stored === null) {
       setCalc({
         ...calc,
-        display: n,
+        display: +n,
         stored: calc.display,
       });
     } else {
       setCalc({
         ...calc,
-        display: calc.display * 10 + n,
+        display: +(calc.display + n),
       });
     }
   }
 
-  function setOperator(sign) {
+  function handleOperator(sign) {
     if (calc.stored) {
       setCalc({
         display: operate(calc.stored, calc.display, calc.operator),
@@ -55,7 +56,7 @@ function App() {
     }
   }
 
-  function setEqual() {
+  function handleEqual() {
     setCalc({
       display: operate(calc.stored, calc.display, calc.operator),
       operator: null,
@@ -73,7 +74,7 @@ function App() {
         C
       </button>
       <Numbers appendNumber={appendNumber}></Numbers>
-      <Signs setOperator={setOperator} setEqual={setEqual}></Signs>
+      <Signs setOperator={handleOperator} handleEqual={handleEqual}></Signs>
     </div>
   );
 }

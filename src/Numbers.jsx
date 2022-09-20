@@ -8,20 +8,14 @@ function Number({ num, appendNumber }) {
   );
 }
 
+const numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "00"];
+
 export default function Numbers({ appendNumber }) {
   return (
     <>
-      <Number num={9} appendNumber={appendNumber} />
-      <Number num={8} appendNumber={appendNumber} />
-      <Number num={7} appendNumber={appendNumber} />
-      <Number num={6} appendNumber={appendNumber} />
-      <Number num={5} appendNumber={appendNumber} />
-      <Number num={4} appendNumber={appendNumber} />
-      <Number num={3} appendNumber={appendNumber} />
-      <Number num={2} appendNumber={appendNumber} />
-      <Number num={1} appendNumber={appendNumber} />
-      <Number num={0} appendNumber={appendNumber} />
-      <button className="double-zero">00</button>
+      {numbers.map((n) => (
+        <Number key={n} num={n} appendNumber={appendNumber} />
+      ))}
       <button className="decimal-point">.</button>
     </>
   );
